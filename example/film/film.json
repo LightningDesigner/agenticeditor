@@ -1,0 +1,67 @@
+{
+  "id": "hello-agenticeditor",
+  "title": "Hello, agentic editor",
+  "version": "v1",
+  "fps": 30,
+  "width": 1080,
+  "height": 1080,
+  "bpm": 120,
+  "beatsPerBar": 4,
+  "sections": [
+    {
+      "id": "hello",
+      "title": "Hello",
+      "bars": 4,
+      "beats": [
+        {
+          "id": "type",
+          "label": "first letter",
+          "bar": 0,
+          "beat": 1
+        },
+        {
+          "id": "done",
+          "label": "word complete",
+          "bar": 2,
+          "beat": 0
+        }
+      ],
+      "intent": "Open on a blank page. Type one word, one letter per beat. The cursor blinks on the beat. Nothing else.",
+      "props": {
+        "word": "hello"
+      }
+    },
+    {
+      "id": "grid",
+      "title": "Grid",
+      "bars": 4,
+      "beats": [
+        {
+          "id": "build",
+          "bar": 0,
+          "beat": 0
+        },
+        {
+          "id": "drop",
+          "label": "the drop",
+          "bar": 2,
+          "beat": 0
+        }
+      ],
+      "intent": "Box-drawing cells build up row by row, then everything inverts on the drop. The grid is the product: software made of type."
+    },
+    {
+      "id": "outro",
+      "title": "Outro",
+      "bars": 2,
+      "beats": [
+        {
+          "id": "title",
+          "bar": 0,
+          "beat": 2
+        }
+      ],
+      "intent": "Name and one line. Hold long enough to read twice."
+    }
+  ]
+}

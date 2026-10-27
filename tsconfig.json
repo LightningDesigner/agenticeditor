@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "react-jsx",
+    "strict": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowImportingTsExtensions": true,
+    "types": ["node", "vite/client"],
+    "baseUrl": ".",
+    "paths": {
+      "agenticeditor": ["src/film/index.ts"],
+      "@ae-gen": ["example/.agenticeditor/gen/film.gen.ts"]
+    }
+  },
+  "include": ["src", "example/film", "templates/film", "example/.agenticeditor/gen"]
+}

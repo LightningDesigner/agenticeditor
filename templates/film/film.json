@@ -1,0 +1,18 @@
+{
+  "id": "film",
+  "title": "film",
+  "version": "v1",
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "bpm": 120,
+  "beatsPerBar": 4,
+  "sections": [
+    {
+      "id": "intro",
+      "bars": 4,
+      "intent": "Replace this with what the section must say. The agent that claims it reads this first.",
+      "beats": [{ "id": "in", "bar": 0, "beat": 0 }]
+    }
+  ]
+}

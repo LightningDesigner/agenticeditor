@@ -1,0 +1,12 @@
+# never, anywhere
+node_modules/
+.env*
+.DS_Store
+*.log
+
+# agenticeditor: generated and rendered state (claims/notes/log stay with the project that uses agenticeditor, not in this repo)
+.agenticeditor/
+
+
+# design review screenshots
+.review/

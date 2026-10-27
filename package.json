@@ -1,0 +1,74 @@
+{
+  "name": "agenticeditor",
+  "version": "0.1.0",
+  "description": "A video editor agents drive. Films are React code on a beat grid, sections are owned by agents, and humans review by pinning notes to frames.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "agenticeditor": "./bin/agenticeditor.mjs",
+    "ae": "./bin/agenticeditor.mjs"
+  },
+  "scripts": {
+    "dev": "tsx src/cli/index.ts dev --root example",
+    "agenticeditor": "tsx src/cli/index.ts",
+    "check": "tsx src/cli/index.ts check --root example",
+    "typecheck": "tsx src/cli/index.ts check --root example >/dev/null; tsc --noEmit",
+    "prepublishOnly": "tsx src/cli/index.ts check --root example && tsc --noEmit"
+  },
+  "dependencies": {
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "@remotion/bundler": "^4.0.499",
+    "@remotion/player": "^4.0.499",
+    "@remotion/renderer": "^4.0.499",
+    "@vitejs/plugin-react": "^6.1.2",
+    "chokidar": "^6.0.0",
+    "commander": "^15.0.0",
+    "motion": "^14.6.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "remotion": "^4.0.499",
+    "tsx": "^4.23.15",
+    "vite": "^8.3.5",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "prettier": "^3.8.1",
+    "typescript": "^5.9.3"
+  },
+  "keywords": [
+    "video",
+    "editor",
+    "agents",
+    "remotion",
+    "react",
+    "motion",
+    "claude",
+    "codex",
+    "skills"
+  ],
+  "author": "Rushil Jha <imrushil28@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LightningDesigner/agenticeditor.git"
+  },
+  "exports": {
+    ".": "./src/film/index.ts",
+    "./package.json": "./package.json"
+  },
+  "types": "./src/film/index.ts",
+  "files": [
+    "bin",
+    "src",
+    "skills",
+    "templates",
+    "example/film",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  }
+}
