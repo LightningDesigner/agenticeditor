@@ -5,18 +5,37 @@ named beats. Each section is owned by one agent at a time, so several agents can
 Humans review in a local editor by pinning notes to exact frames. Agents answer with renders of those frames,
 and they look at their own frames before anyone else does.
 
-First draft. Modelled on how the Paper Mono launch film was made
+## Install
+
+Run this once in the project you want to make a video in:
+
+```sh
+npm i -D agenticeditor && npx agenticeditor init
+```
+
+That's it. It adds `film/` (the film's plan and one file per section) and installs the agent skills. Open the
+editor with `npx agenticeditor dev`; it prints the localhost link.
+
+## Give it to an agent
+
+Paste this to Claude Code, Codex or any coding agent working in your project:
+
+> Install the agenticeditor npm package in this project and set it up: run
+> `npm i -D agenticeditor && npx agenticeditor init`. Then load the `agenticeditor` skill it installed and
+> follow it for all video work: write the film's sections in `film/film.json`, build each section in
+> `film/sections/`, run `npx agenticeditor check` after every change, and look at your own frames with
+> `npx agenticeditor frame <section>` before telling me it's done. Start the editor with
+> `npx agenticeditor dev` and give me the link.
+
+After `init`, an agent opening the project finds the skills on its own, so later sessions need no instructions.
+
+Modelled on how the Paper Mono launch film was made
 ([thread](https://x.com/agusegui/status/2108251509830140401)): sections own their beats, reviews are comments
 pinned to frames, versions are forks, and every change is checked.
 
-## Install into a project
+## The skills
 
-    npm i -D agenticeditor             # or: npm i -D github:LightningDesigner/agenticeditor
-    npx agenticeditor init --id launch          # film/ scaffold + skills into .claude/skills and .agents/skills
-    npx agenticeditor dev                       # editor at http://127.0.0.1:4780
-
-`init` installs four skills, so any Claude Code or Codex session in that project knows how to work the film
-without being told:
+`init` installs four skills into `.claude/skills` and `.agents/skills`:
 
 | Skill | For |
 |---|---|
@@ -25,7 +44,7 @@ without being told:
 | `agenticeditor-notes` | Working through notes pinned in the editor, answering with a render |
 | `agenticeditor-orchestrate` | One agent per section, handoffs by id, checking the joins |
 
-## Try it here
+## Working on this package itself
 
     npm install
     npm run dev                                      # editor on the example film

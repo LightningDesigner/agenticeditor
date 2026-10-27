@@ -1,6 +1,6 @@
 {
   "name": "agenticeditor",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A video editor agents drive. Films are React code on a beat grid, sections are owned by agents, and humans review by pinning notes to frames.",
   "license": "MIT",
   "type": "module",
